@@ -1,45 +1,44 @@
 from CsvReader import CsvReader
+import numpy
 
 
 def addition(a, b):
-    a = int(a)
-    b = int(b)
+    a = float(a)
+    b = float(b)
     c = a + b
     return c
 
 
 def subtraction(a, b):
-    a = int(a)
-    b = int(b)
-    c = b - a
+    a = float(a)
+    b = float(b)
+    c = a - b
     return c
 
 
 def multiplication(a, b):
-    a = int(a)
-    b = int(b)
+    a = float(a)
+    b = float(b)
     c = a * b
     return c
 
 
 def division(a, b):
-    a = int(a)
-    b = int(b)
-    c = b / a
+    a = float(a)
+    b = float(b)
+    c = a / b
     return c
 
 
-def square(a, b):
-    a = int(a)
-    b = int(b)
-    c = a ** b
+def square(a):
+    a = float(a)
+    c = a ** 2
     return c
 
 
-def square_root(a, b):
-    a = int(a)
-    b = int(b)
-    c = b // a
+def square_root(a):
+    a = float(a)
+    c = numpy.sqrt(a)
     return c
 
 
@@ -65,12 +64,12 @@ class Calculator:
         self.result = division(a, b)
         return self.result
 
-    def square(self, a, b):
-        self.result = square(a, b)
+    def square(self, a):
+        self.result = square(a)
         return self.result
 
-    def square_root(self, a, b):
-        self.result = square_root(a, b)
+    def square_root(self, a):
+        self.result = square_root(a)
         return self.result
 
 
@@ -78,5 +77,5 @@ class CSVStats(Calculator):
     data = []
 
     def __init__(self, data_file):
-        super().__init__()
         self.data = CsvReader(data_file)
+        pass
