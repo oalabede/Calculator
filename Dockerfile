@@ -4,4 +4,4 @@ ADD . .
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "./src/CalculatorTest.py" ]
+CMD [ "python", "-m", "unittest", "discover", "-s", "Tests" ]
