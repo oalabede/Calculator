@@ -1,5 +1,4 @@
 import numpy
-
 from CsvReader import CsvReader
 
 
