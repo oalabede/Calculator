@@ -1,6 +1,7 @@
-from statistics import mean, mode, variance
-from numpy import median, std
+from statistics import mean, median, mode, variance
 
+import numpy
+from numpy import std
 from Calculator import Calculator
 
 

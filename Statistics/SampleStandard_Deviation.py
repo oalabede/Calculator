@@ -2,8 +2,8 @@ import numpy
 from Get_sample import getSample
 
 
-def sample_mean(data, sample_size):
+def sample_std(data, sample):
     total = 0
-    sample = getSample(data, sample_size)
-    res = numpy.std(data)
+    sample = getSample(data, sample)
+    res = numpy.sqrt(data)
     return res
