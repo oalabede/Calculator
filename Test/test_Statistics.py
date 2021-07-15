@@ -1,4 +1,6 @@
 import unittest
+
+import numpy
 from Statistics.Statistics import Statistics
 from numpy.random import randint
 from numpy.random import seed
@@ -49,10 +51,10 @@ class MyTestCase(unittest.TestCase):
     def test_std_calculator(self):
         test_data = CsvReader('Test/Standard_Deviation.csv').data
         for row in test_data:
-            array = [row['Value 1']]
+            array = [row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4'], row['Value 5'], row['Value 6']]
             array = [float(a) for a in array]
-            std = self.statistics.std(array)
-            self.assertEqual(std, float(row['Result']))
+            numpy.std = self.statistics.std(array)
+            self.assertEqual(numpy.std, float(row['Result']))
 
 
 if __name__ == '__main__':

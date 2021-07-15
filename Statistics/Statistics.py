@@ -24,5 +24,5 @@ class Statistics(Calculator):
         return self.result
 
     def std(self, data):
-        self.result = std(data)
+        self.result = numpy.std(data)
         return self.result
